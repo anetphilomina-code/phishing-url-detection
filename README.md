@@ -34,14 +34,12 @@ phishing-url-detection/
 
 ## 🧠 Model
 Multiple **Ensemble Machine Learning Models** were trained and evaluated for phishing URL classification:
-
-
-| Model | Accuracy | Notes |
-|-------|----------|-------|
-| Random Forest | High | Good baseline performance |
-| AdaBoost | Moderate | Sensitive to noisy features |
-| Gradient Boosting | High | Performs well but slower |
-| **XGBoost (Chosen Model)** | **Highest Accuracy** | Fast, robust, handles imbalance well |
+| Model | Accuracy | Precision | Recall | F1 Score |
+|-------|----------|-----------|--------|----------|
+| Random Forest | 0.998346 | 0.997889 | 0.999221 | 0.998555 |
+| AdaBoost | 0.994805 | 0.992845 | 0.998109 | 0.995470 |
+| Gradient Boosting | 0.997455 | 0.996193 | 0.999370 | 0.997779 |
+| **XGBoost (Chosen Model)** | **0.998791** | **0.998223** | **0.999666** | **0.998944** (Chosen Model)** | **Highest Accuracy** | Fast, robust, handles imbalance well |
 
 
 After comparing all models, **XGBoost** was selected as the final model due to its superior performance and ability to generalize well.
@@ -50,6 +48,7 @@ After comparing all models, **XGBoost** was selected as the final model due to i
 The final trained model is saved as **`xgboost_phishing_model.pkl`** for deployment and predictions.
 
 
+------|---------|
 ------|---------|
 | 0 | Phishing URL |
 | 1 | Legitimate URL |
